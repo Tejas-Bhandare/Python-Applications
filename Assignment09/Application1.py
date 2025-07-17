@@ -18,11 +18,16 @@ def main():
     Thread2 = threading.Thread(target= printNumbers, args= (value,))
     Thread2.name = "Thread2"
 
+    Thread3 = threading.Thread(target= printNumbers, args= (value,))
+    Thread3.name = "Thread3"
+
     Thread1.start()
     Thread2.start()
+    Thread3.start()
 
     Thread1.join()
     Thread2.join()
+    Thread3.join()
 
     print("End of main")
 
